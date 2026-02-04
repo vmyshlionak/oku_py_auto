@@ -1,7 +1,7 @@
-from abc import abstractmethod
+from abc import ABC, abstractmethod
 
 
-class Group:
+class Group(ABC):
     pupils = True
     school_name = 42
     director = 'Marivanna'
@@ -34,25 +34,25 @@ class PrimaryGroup(Group):
 
 
 class HighGroup(Group):
-    max_age = 18
-    min_age = 14
+    max_age = 15
+    min_age = 11
 
     def move(self):
         print('Go slowly')
 
 class MediumGroup(Group):
     max_age = 15
-    min_age = 10
+    min_age = 11
 
-some_group = Group('1a', 15, 'MG') #по идее здесь должна была быть ошибка, так как класс содержит абстрактный метод, и нельзя создавать его прямые экземпляры
-print(some_group.move()) #распечатает None, потому что метод абстрактный
+
+#some_group = Group('1a', 15, 'MG') #класс Group должен наследоваться от ABC, чтобы выдавать ошибки из-за некорректного обращения с его абстрактностью
+#print(some_group.move()) #распечатает None, потому что метод абстрактный
 
 first_a = PrimaryGroup('1a', 18, 'MF', 5)
 first_b = PrimaryGroup('1b', 20, 'TD', 8)
 
 eleven_a = HighGroup('11a', 22, 'AR')
-six_a = MediumGroup('6a', 25, 'RI')
-
+#six_a = MediumGroup('6a', 25, 'RI') #не даст создать экземпляр, т.к. посчитает класс абстрактным (он тянет абстрактный метод move() из Group)
 
 print(first_a.pupils_count)
 print(first_a.class_room)
@@ -74,4 +74,4 @@ first_a.study()
 eleven_a.study()
 first_a.move()
 eleven_a.move()
-six_a.move()
+#six_a.move()
