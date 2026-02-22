@@ -4,7 +4,7 @@ import mysql.connector as mysql
 # config = {
 #     'host': 'localhost',
 #     'user': 'root',
-#     'password': '',  # в XAMPP по умолчанию пусто
+#     'password': '',  # в XAпше PP по умолчанию пусто
 #     'database': 'my_autotest_db'
 # }
 
