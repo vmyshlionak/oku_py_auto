@@ -1,0 +1,39 @@
+/vika_homework/lesson_17/creds.py
+
+# Виртуальное окружение (самое важное!)
+venv/
+.venv/
+env/
+ENV/
+
+# Кэш Python (временные файлы компиляции)
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Настройки PyCharm (индивидуальные настройки IDE)
+.idea/
+
+# Базы данных (если не хочешь делиться своей локальной БД)
+*.sqlite3
+*.db
+
+# Файлы с секретами и переменными окружения (пароли, ключи API)
+.env
+.flaskenv
+
+# Логи и отчеты
+*.log
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.pyo
+
+# Расширения Windows/macOS
+Thumbs.db
+.DS_Store
