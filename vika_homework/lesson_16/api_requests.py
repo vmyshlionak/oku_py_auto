@@ -1,12 +1,14 @@
+import sys
+
 import requests
 
 def get_all_pets():
     response = requests.get('https://api.petstoreapi.com/v1/pets').json()
     first_pet = response['data'][0]
     print(first_pet)
-    assert (first_pet['name']) == 'MedicalPe', 'Incorrect name'
+    assert (first_pet['name']) == 'MedicalPet', 'Incorrect name'
 
-# get_all_pets()
+get_all_pets()
 
 def post_a_pet():
     body = {
@@ -58,7 +60,9 @@ def new_pet():
 }
     headers = {'Authorization': 'Bearer {{bearerToken}}'}
     response = requests.post('https://api.petstoreapi.com/v1/pets', json = body, headers = headers).json()
+    print(response)
     return response['id']
+
 
 
 def put_a_pet():
@@ -70,4 +74,6 @@ def put_a_pet():
     response = requests.put(f'https://api.petstoreapi.com/v1/pets/{pet_id}', json=body, headers=headers).json()
     print(response)
 
-put_a_pet()
+new_pet()
+
+print(sys.platform)
