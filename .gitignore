@@ -1,5 +1,9 @@
 /vika_homework/lesson_17/creds.py
 
+ /vika_homework/lesson_18/allure-report/
+ /vika_homework/lesson_18/allure-results/
+
+
 # Виртуальное окружение (самое важное!)
 venv/
 .venv/
@@ -37,3 +41,5 @@ coverage.xml
 # Расширения Windows/macOS
 Thumbs.db
 .DS_Store
+/vika_homework/lesson_18/allure-report/
+/vika_homework/lesson_18/allure-results/
