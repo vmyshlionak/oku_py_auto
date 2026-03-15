@@ -1,7 +1,9 @@
 import requests
 import pytest
+import time
 
 # запуск в консоли 'pytest -v -s' - это с деталями и принтами (-s), если они есть внутри функций, а так они скипаются
+# установка pytest-xdist и запуск 'pytest -vs -n auto' разделяет тесты между воркерами (по числу ядер в системе, если auto)
 
 @pytest.fixture()
 def new_pet_id():
@@ -84,4 +86,11 @@ def test_smth():
 
 @pytest.mark.parametrize('logins', ['', '   ', '#$%^&*'])
 def test_smth2(logins):
+    time.sleep(3)
     assert True
+
+@pytest.mark.parametrize('a, b', [(1, 2), (3, 4), (5, 6)])
+def test_smth3(a, b):
+    time.sleep(3)
+    assert a + b == 3
+    
