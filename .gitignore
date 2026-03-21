@@ -3,6 +3,7 @@
  /vika_homework/lesson_18/allure-report/
  /vika_homework/lesson_18/allure-results/
 
+.idea
 
 # Виртуальное окружение (самое важное!)
 venv/
@@ -41,5 +42,4 @@ coverage.xml
 # Расширения Windows/macOS
 Thumbs.db
 .DS_Store
-/vika_homework/lesson_18/allure-report/
-/vika_homework/lesson_18/allure-results/
+
