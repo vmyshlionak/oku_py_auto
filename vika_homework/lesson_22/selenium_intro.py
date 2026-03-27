@@ -25,3 +25,13 @@ search_input.send_keys('cat')
 search_input.submit()
 
 assert 'cat' in driver.title, f"Ожидалось 'cat' в заголовке, но получено: '{driver.title}'"
+
+# Дожидание появления какого-либо элемента на странице:
+
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+#
+# # Ждем до 10 секунд, пока кнопка станет доступна для клика
+# wait = WebDriverWait(driver, 10)
+# btn = wait.until(EC.element_to_be_clickable((By.NAME, 'btnK')))
+# btn.click()
