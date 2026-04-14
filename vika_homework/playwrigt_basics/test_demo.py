@@ -45,7 +45,7 @@ def test_by_placeholder(page: Page):
     page.get_by_placeholder('Submit me').fill('skdjfhsdf')
     sleep(3)
 
-#найти свой
+#мой
 def test_by_alt_text(page: Page):
     sleep(3)
     page.goto('https://testpages.eviltester.com/apps/basiccart/?page=1&limit=10')
